@@ -9,9 +9,17 @@
 </head>
 <body>
 	<a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false" renderer="antialias: true; alpha: True">
+		<a-assets>
+	    <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf">
+		</a-asset-item>
+		
+		<a-asset-item id="pushkin" src="https://raw.githubusercontent.com/0pain000/NFT-MARKER/main/assets/pushkin/scene.gltf">
+		</a-asset-item>
+	  </a-assets>
 		<a-camera gps-new-camera="gpsMinDistance: 5">
                 </a-camera>
-		<a-entity material="color: red" geometry="primitive: box" gps-new-entity-place="latitude: 52.532; longitude: 85.184" scale="10 10 10">
+		<a-entity  gltf-model="#pushkin"
+				   gps-new-entity-place="latitude: 52.532; longitude: 85.184" scale="0.1 0.1 0.1">
                 </a-entity>
 	</a-scene>
 </body>
