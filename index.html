@@ -13,13 +13,12 @@
 			    font-size: 200%;
 				font-family: Arial, Roboto, sans-serif;
 				color: red;
-				align: center;
 			  }
 			</style>
 </head>
     <body>
 	    <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false" renderer="antialias: true; alpha: True">
-		    <div id="message" style=>
+		    <div id="message">
 			    Извиняюсь, что далее текст в приложении на английском языке. Пока приложение еще в тестовой версии. Позже будут изменения. Приятного пользования!
 			</div>
 			    <script>setTimeout(function(){
@@ -39,7 +38,7 @@
 							    gps-new-entity-place="latitude: 52.532; longitude: 85.184" scale="1 1 1">
 							</a-entity>
 							    <a-text value="This is the best university in the world!!! Ла ла ла, русский текст"
-								    font="Texts/20960-msdf.json"
+								    font="https://raw.githubusercontent.com/0pain000/gps-AR/main/Texts/20960-msdf.json"
 								    font-image="https://raw.githubusercontent.com/0pain000/gps-AR/main/Texts/20960.0.png; https://raw.githubusercontent.com/0pain000/gps-AR/main/Texts/20960.1.png; https://raw.githubusercontent.com/0pain000/gps-AR/main/Texts/20960.2.png"
 								    align="center"
 								    color="red"
