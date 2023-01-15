@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="https://aframe.io/releases/1.3.0/aframe.min.js">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js">
     </script>
-	    <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js">
-        </script>
-            <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	  <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/three.js/build/ar-threex-location-only.js">
+      </script>
+        <script type="text/javascript" src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js">
+		</script>
 </head>
-<body>
-	<a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false" renderer="antialias: true; alpha: True">
-		<a-assets>
-	    <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf">
-		</a-asset-item>
-		
-		<a-asset-item id="pushkin" src="https://raw.githubusercontent.com/0pain000/NFT-MARKER/main/assets/pushkin/scene.gltf">
-		</a-asset-item>
-	  </a-assets>
-		<a-camera gps-new-camera="gpsMinDistance: 5">
-                </a-camera>
-		<a-entity  gltf-model="#pushkin"
-				   gps-new-entity-place="latitude: 52.532; longitude: 85.184" scale="1 1 1">
-                </a-entity>
-		<a-text value="Привет, мир!!!"
-                    font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt"
-		    color="red"
-		    gps-new-entity-place="latitude: 52.532434; longitude: 85.184478"
-		    scale="40 40 40">
-                </a-text>
-	</a-scene>
-</body>
+    <body>
+	    <a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false" renderer="antialias: true; alpha: True">
+		    <div id="message">
+			    Извиняюсь, что далее текст в приложении на английском языке. Пока приложение еще в тестовой версии. Позже будут изменения. Приятного пользования!
+			</div>
+			    <script>setTimeout(function(){
+				    document.getElementById('message').style.display = 'none';
+					}, 2000);
+				</script>
+		            <a-assets>
+					    <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf">
+						</a-asset-item>
+						
+						<a-asset-item id="pushkin" src="https://raw.githubusercontent.com/0pain000/NFT-MARKER/main/assets/pushkin/scene.gltf">
+						</a-asset-item>
+					</a-assets>
+					    <a-camera gps-new-camera="gpsMinDistance: 5">
+						</a-camera>
+						    <a-entity  gltf-model="#pushkin"
+							    gps-new-entity-place="latitude: 52.532; longitude: 85.184" scale="1 1 1">
+							</a-entity>
+							    <a-text value="Привет, мир!!!"
+								    font="https://cdn.aframe.io/fonts/DejaVu-sdf.fnt"
+									color="red"
+									gps-new-entity-place="latitude: 52.532434; longitude: 85.184478"
+									scale="40 40 40">
+								</a-text>
+		</a-scene>
+	</body>
 </html>
